@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 def pixel_to_number(pix, shape=(768,1366)):
@@ -43,7 +44,8 @@ for a in range(image.shape[0]):
     if a%10 == 0:
         print(a)
 
-
+matplotlib.image.imsave('mandelbrot.png', image)
 
 plt.imshow(image, interpolation='nearest', cmap='gray')
+
 plt.show()
